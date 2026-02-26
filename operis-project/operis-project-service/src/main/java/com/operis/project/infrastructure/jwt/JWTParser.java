@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class JWTParser {
 
-    @Value("${code.secret}")
+    @Value("${code.secret:valeurParDefautSiAbsente}")
     private String codeSecret;
 
     public JWTClaimsSet parseToken(String token){
